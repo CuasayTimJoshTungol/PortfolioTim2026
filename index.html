@@ -10,11 +10,9 @@
 <link rel="icon" href="https://i.postimg.cc/d0jyqzdg/dev-removebg-preview.png" type="image/jpeg" />
 <link rel="apple-touch-icon" href="https://i.postimg.cc/d0jyqzdg/dev-removebg-preview.png" />
 
-<script type="module" src="https://unpkg.com/peekpal"></script>
-
-<!-- Security hardening (UPDATED to allow unpkg.com for the mascot script) -->
+<!-- Security hardening -->
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; media-src 'self' https: blob:; connect-src 'self' https: https://unpkg.com; base-uri 'self'; form-action 'self';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; media-src 'self' https: blob:; connect-src 'self' https:; base-uri 'self'; form-action 'self';">
 
 <script>
   (function() {
@@ -829,28 +827,14 @@
             </div>
           </div>
 
-          <!-- Right side column: Get in touch button + Mascot -->
-          <div class="flex flex-col items-end gap-6 shrink-0">
-            <div data-anim class="lg:pt-1">
-              <button data-goto="contact"
-                class="group inline-flex items-center gap-3 rounded-full bg-ink py-2 pl-6 pr-2 text-sm font-bold text-canvas shadow-lift transition-all duration-300 hover:-translate-y-1 hover:shadow-xl active:translate-y-0">
-                Get in touch
-                <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-500 text-white transition-transform duration-500 group-hover:rotate-45">
-                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-                </span>
-              </button>
-            </div>
-            
-            <!-- Interactive Mascot (Hidden on mobile, sits below the button on desktop) -->
-            <!-- Updated to point to your local .webp files -->
-            <div class="hidden lg:block mr-2 mt-4">
-              <peek-pal 
-                poses="poses.webp" 
-                moods="moods.webp" 
-                label="Tim Josh Mascot"
-                size="150">
-              </peek-pal>
-            </div>
+          <div data-anim class="shrink-0 lg:pt-1">
+            <button data-goto="contact"
+              class="group inline-flex items-center gap-3 rounded-full bg-ink py-2 pl-6 pr-2 text-sm font-bold text-canvas shadow-lift transition-all duration-300 hover:-translate-y-1 hover:shadow-xl active:translate-y-0">
+              Get in touch
+              <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-500 text-white transition-transform duration-500 group-hover:rotate-45">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </span>
+            </button>
           </div>
         </div>
 
